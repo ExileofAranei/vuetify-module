@@ -5,14 +5,14 @@ import { Options } from './options'
 
 export default function setupBuild (this: ModuleThis, options: Options) {
   if (!options.treeShake) {
-    this.options.css!.push('vuetify/dist/vuetify.css')
+    this.options.css!.push('@exileofaranei/vuetify/dist/vuetify.css')
   }
 
   // Enable tree-shaking with VuetifyLoader (https://github.com/vuetifyjs/vuetify-loader)
   if (options.treeShake) {
     const VuetifyLoaderPlugin = this.nuxt.resolver.requireModule('vuetify-loader/lib/plugin')
 
-    ;(this.options.build!.transpile! as string[]).push('vuetify/lib')
+    ;(this.options.build!.transpile! as string[]).push('@exileofaranei/vuetify/lib')
 
     this.extendBuild((config) => {
       config.plugins!.push(new VuetifyLoaderPlugin(typeof options.treeShake === 'object' ? options.treeShake.loaderOptions : {}))
