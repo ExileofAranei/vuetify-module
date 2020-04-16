@@ -33,7 +33,7 @@
     "fibers": "^4.0.2",
     "sass": "^1.26.3",
     "sass-loader": "^8.0.2",
-    "@exileofaranei/vuetify": "^1.0.7",
+    "@exileofaranei/vuetify": "^1.0.11",
     "vuetify-loader": "^1.4.3"
   },
   "devDependencies": {
